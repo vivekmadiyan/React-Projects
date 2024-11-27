@@ -7,18 +7,27 @@ function NumberSelector() {
   
 
   return (
-    <div>
+    <NumberSelectorContainer>
+        <div className='flex'>
         {
             arrNumber.map((value,i)=>(<Box isSelected={value==selectedNumber}
             key={i} onClick={()=>setselectedNumber(value)}
             >{value}</Box>))
         }
+        </div>
+        <p>Select Number</p>
   
-    </div>
+    </NumberSelectorContainer>
   )
 }
 
 export default NumberSelector
+const NumberSelectorContainer=styled.div`
+.flex{
+ display: flex;
+ gap: 24px;
+}
+ `;
  const Box=styled.div `
     height: 72px;
     width: 72px;
