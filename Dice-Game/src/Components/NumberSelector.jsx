@@ -27,5 +27,6 @@ export default NumberSelector
     place-items: center;
     font-size: 24px;
     font-weight: 700;
-    background-color: ${(props)=>props.isSelected? "black ": "white"};
+    background-color: ${(props)=>props.isSelected ? "black ": "white"};
+    color: ${(props)=>props.isSelected ? "white ": "black"};
  `;
